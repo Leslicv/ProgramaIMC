@@ -85,6 +85,33 @@
 
     </div>
   </section>
+    <section id="resumen" class="seccion">
+    <div class="card resumen-card">
+      <h3>Mi resumen saludable</h3>
+      <p>Genera una tarjeta con tus resultados principales.</p>
+
+      <button onclick="guardarResumen()">Generar tarjeta</button>
+
+      <div id="tarjetaResumen" class="tarjeta-resumen oculto">
+        <h3 id="nombreResumen">Mi tarjeta saludable</h3>
+
+        <div class="dato">
+          <span>IMC</span>
+          <strong id="imcResumen">No calculado</strong>
+        </div>
+
+        <div class="dato">
+          <span>Clasificación</span>
+          <strong id="categoriaResumen">No calculada</strong>
+        </div>
+
+        <div class="dato">
+          <span>Agua diaria</span>
+          <strong id="aguaResumen">No calculada</strong>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="layout-principal">
 
     <article class="articulo-principal">
@@ -147,33 +174,7 @@
     </div>
   </section>
 
-  <section id="resumen" class="seccion">
-    <div class="card resumen-card">
-      <h3>Mi resumen saludable</h3>
-      <p>Genera una tarjeta con tus resultados principales.</p>
 
-      <button onclick="guardarResumen()">Generar tarjeta</button>
-
-      <div id="tarjetaResumen" class="tarjeta-resumen oculto">
-        <h3 id="nombreResumen">Mi tarjeta saludable</h3>
-
-        <div class="dato">
-          <span>IMC</span>
-          <strong id="imcResumen">No calculado</strong>
-        </div>
-
-        <div class="dato">
-          <span>Clasificación</span>
-          <strong id="categoriaResumen">No calculada</strong>
-        </div>
-
-        <div class="dato">
-          <span>Agua diaria</span>
-          <strong id="aguaResumen">No calculada</strong>
-        </div>
-      </div>
-    </div>
-  </section>
 
 </main>
 
