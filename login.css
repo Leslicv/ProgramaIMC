@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(20,20,20,.55), rgba(20,20,20,.65)),
+    url("imc/fondo-login.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: rgba(255,255,255,.94);
+  border-radius: 28px;
+  padding: 38px 34px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.5);
+}
+
+.logo-colegio {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.login-card h1 {
+  font-size: 30px;
+  color: #222;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.login-card h2 {
+  font-size: 24px;
+  color: #555;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.descripcion {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 14px;
+  padding: 0 14px;
+  margin-bottom: 16px;
+}
+
+.input-group span {
+  color: #555;
+  font-size: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #222;
+}
+
+.input-group input::placeholder {
+  color: #888;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: #222;
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+button:hover {
+  background: #444;
+}
+
+.login-footer {
+  margin-top: 24px;
+  border-top: 1px solid #dddddd;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.login-footer p {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.login-footer small {
+  color: #777;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .login-card h1 {
+    font-size: 26px;
+  }
+
+  .login-card h2 {
+    font-size: 21px;
+  }
+}

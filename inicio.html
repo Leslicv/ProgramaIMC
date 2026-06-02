@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - IMC Saludable</title>
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-content">
+
+    <div class="header-left">
+      <img src="img/logo.png" alt="Logo" class="header-logo">
+
+      <div>
+        <h1>IMC Saludable</h1>
+        <p>I.E.P. Parroquial Cocharcas</p>
+      </div>
+    </div>
+
+    <button class="btn-salir" onclick="cerrarSesion()">
+      Salir
+    </button>
+
+  </div>
+</header>
+
+<nav class="menu">
+  <a href="#calculadoras">Calculadoras</a>
+  <a href="#salud">Salud</a>
+  <a href="#resumen">Mi resumen</a>
+</nav>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-texto">
+      <span class="etiqueta">Programa de salud 2026</span>
+      <h2 id="saludo">Bienvenido(a) al programa IMC Saludable</h2>
+      <p>
+        Aprende sobre tu salud, calcula tu IMC, conoce cuánta agua deberías beber
+        y guarda tu resumen personal.
+      </p>
+    </div>
+
+    <div class="hero-imagen">
+      <img src="img/salud.png" alt="Imagen de salud">
+    </div>
+  </section>
+  <section id="calculadoras" class="seccion">
+    <h2>Herramientas saludables</h2>
+
+    <div class="cards-grid">
+
+      <div class="card">
+        <h3>Calcula tu IMC</h3>
+        <p>Ingresa tu peso y altura para conocer tu clasificación.</p>
+
+        <input type="number" id="pesoIMC" placeholder="Peso en kg">
+        <input type="number" id="alturaIMC" placeholder="Altura en metros. Ej: 1.60" step="0.01">
+
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        <div id="resultadoIMC" class="resultado"></div>
+      </div>
+
+      <div class="card">
+        <h3>Vasos de agua al día</h3>
+        <p>Calcula una recomendación aproximada según tu peso.</p>
+
+        <input type="number" id="pesoAgua" placeholder="Peso en kg">
+
+        <button onclick="calcularAgua()">Calcular agua</button>
+        <div id="resultadoAgua" class="resultado"></div>
+      </div>
+
+      <div class="card">
+        <h3>Consejo saludable</h3>
+        <p>Recibe una recomendación breve para mejorar tu rutina.</p>
+
+        <button onclick="mostrarConsejo()">Ver consejo</button>
+        <div id="resultadoConsejo" class="resultado"></div>
+      </div>
+
+    </div>
+  </section>
+  <section class="layout-principal">
+
+    <article class="articulo-principal">
+      <div class="imagen-articulo">
+        <img src="img/imc.jpg" alt="Imagen sobre IMC">
+      </div>
+
+      <div class="contenido-articulo">
+        <span>Informe especial</span>
+        <h2>Conocer tu IMC puede ayudarte a mejorar tus hábitos diarios</h2>
+        <p>
+          El Índice de Masa Corporal es una referencia sencilla para evaluar
+          la relación entre peso y estatura. No reemplaza una evaluación médica,
+          pero ayuda a tomar conciencia sobre el estado de salud.
+        </p>
+      </div>
+    </article>
+
+    <aside class="columna-derecha">
+      <div class="mini-card">
+        <img src="img/agua.jpg" alt="Agua diaria">
+        <h3>Agua diaria</h3>
+        <p>La hidratación ayuda a la concentración, digestión y energía.</p>
+      </div>
+
+      <div class="mini-card">
+        <img src="img/actividad.jpg" alt="Actividad física">
+        <h3>Actividad física</h3>
+        <p>Caminar 20 a 30 minutos al día mejora la salud cardiovascular.</p>
+      </div>
+    </aside>
+
+  </section>
+
+  
+
+  <section id="salud" class="seccion salud">
+    <h2>Información de salud</h2>
+
+    <div class="salud-grid">
+
+      <article>
+        <img src="img/balanza.jpg" alt="Qué es el IMC">
+        <h3>¿Qué es el IMC?</h3>
+        <p>Es una fórmula que relaciona el peso con la altura para estimar el estado corporal.</p>
+      </article>
+
+      <article>
+        <img src="img/hidratacion.jpg" alt="Importancia del agua">
+        <h3>¿Por qué tomar agua?</h3>
+        <p>El agua ayuda al cuerpo a funcionar mejor y reduce el cansancio durante el día.</p>
+      </article>
+
+      <article>
+        <img src="img/caminar.jpg" alt="Actividad física">
+        <h3>¿Por qué moverse?</h3>
+        <p>La actividad física mejora el corazón, el ánimo, el sueño y el control del peso.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="resumen" class="seccion">
+    <div class="card resumen-card">
+      <h3>Mi resumen saludable</h3>
+      <p>Genera una tarjeta con tus resultados principales.</p>
+
+      <button onclick="guardarResumen()">Generar tarjeta</button>
+
+      <div id="tarjetaResumen" class="tarjeta-resumen oculto">
+        <h3 id="nombreResumen">Mi tarjeta saludable</h3>
+
+        <div class="dato">
+          <span>IMC</span>
+          <strong id="imcResumen">No calculado</strong>
+        </div>
+
+        <div class="dato">
+          <span>Clasificación</span>
+          <strong id="categoriaResumen">No calculada</strong>
+        </div>
+
+        <div class="dato">
+          <span>Agua diaria</span>
+          <strong id="aguaResumen">No calculada</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img src="img/logo.png" alt="Insignia del colegio">
+  <p>I.E.P. Parroquial Cocharcas · Programa IMC Saludable 2026</p>
+</footer>
+<a 
+  href="https://wa.me/51944521871?text=Hola,%20quiero%20consultar%20sobre%20mis%20resultados"
+  target="_blank"
+  class="whatsapp-float"
+>
+  <img src="img/whatsapp.png" alt="WhatsApp">
+</a>
+<script src="inicio.js"></script>
+</body>
+</html>
