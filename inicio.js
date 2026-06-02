@@ -116,6 +116,6 @@ function cerrarSesion() {
 
     localStorage.removeItem("nombreUsuario");
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 }
